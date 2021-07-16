@@ -1,10 +1,10 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-display:flex ;
-justify-content: center;
-align-items: center;
-height: 100vh;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 
 div{
     width: 40%;
@@ -13,5 +13,4 @@ div{
     display:flex ;
     justify-content: center;
 }
-
 `;
