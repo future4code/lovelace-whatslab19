@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from './style'
+import { ContainerFooter } from './style'
 
 export class Footer extends React.Component {
 
@@ -10,7 +10,7 @@ export class Footer extends React.Component {
 
     render() {
         return (
-            <Container>
+            <ContainerFooter>
                 <input
                     placeholder={"Usuário"}
                     value={this.state.usuario}
@@ -22,8 +22,7 @@ export class Footer extends React.Component {
                     // onChange={}
                 />
                 <button>Enviar</button>
-            </Container>
-
+            </ContainerFooter>
         )
     }
 }

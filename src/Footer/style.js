@@ -1,25 +1,13 @@
 import styled from "styled-components"
 
-export const Container = styled.div`
+export const ContainerFooter = styled.footer`
     display:flex ;
-    justify-content:center ;
     align-items: flex-end;
-    height: 100vh;
-    border: solid 2px yellow;
+    justify-content:space-between;
+    gap:10px;
+    padding: 2%;
 
-/* input{
-    color: -internal-light-dark(black, white);
-    display: inline-block;
-    text-align: start;
-    border-image: initial;
+input{
+    width: 100%;
 }
-
-button{
-    border: 1px solid;
-    text-align: center;
-    display:inline-block;
-    cursor:pointer;
-    padding: 10px 15px;
-    background-color: lightgray;
-} */
 `
