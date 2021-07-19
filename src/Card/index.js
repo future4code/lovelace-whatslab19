@@ -1,6 +1,6 @@
 import React from 'react'
 import { Footer } from '../Footer'
-import { Container } from './style'
+import { Container, Titulo } from './style'
 
 export class Card extends React.Component {
 
@@ -10,23 +10,21 @@ export class Card extends React.Component {
 
     show = (mensagem, usuario) => {
         this.setState({ mensagens: [...this.state.mensagens, { mensagem, usuario }] })
-        console.log(mensagem, usuario, this.state.mensagens, "MOSTRANDO")
+
+        this.setState({})
+
     }
 
     render() {
         return (
             <Container>
-                <h3>WhatsLab</h3>
-                {this.state.mensagens.map((mensagem) => {
+                <Titulo>WhatsLab</Titulo>
 
+                {this.state.mensagens.map((mensagem, index) => {
                     return (
-                        <div>
-                            <p>
-                                {mensagem.usuario}
-                            </p>
-                            <p>
-                                {mensagem.mensagem}
-                            </p>
+
+                        <div id="MensagemContainer" key={index}>
+                            <strong> {mensagem.usuario} </strong>: {mensagem.mensagem}
                         </div>
                     )
                 })}
