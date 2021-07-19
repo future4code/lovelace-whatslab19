@@ -8,20 +8,42 @@ export class Footer extends React.Component {
         mensagem: "",
     };
 
+    changeUsuario = (event) => {
+        this.setState({
+            usuario: event.target.value
+        });
+    };
+
+    changeMensagem = (event) => {
+        this.setState({
+            mensagem: event.target.value
+        });
+    };
+
+    tela = () => {
+        
+        this.props.show(this.state.mensagem , this.state.usuario)
+        
+        this.setState({mensagem:"", usuario:""})
+    }
+
     render() {
         return (
+
             <ContainerFooter>
-                <input
+                <input id="usuario"
                     placeholder={"Usuário"}
                     value={this.state.usuario}
-                    // onChange={}
+                    onChange={this.changeUsuario}
                 />
-                <input
+                <input id="mensagem"
                     placeholder={"Mensagem"}
                     value={this.state.mensagem}
-                    // onChange={}
+                    onChange={this.changeMensagem}
                 />
-                <button>Enviar</button>
+
+                <button disabled={!this.state.usuario && !this.state.mensagem} onClick={this.tela}> Enviar </button>
+
             </ContainerFooter>
         )
     }
